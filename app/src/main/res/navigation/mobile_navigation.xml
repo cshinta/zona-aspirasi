@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:label="@string/title_home"
+        android:label="Beranda"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:label="@string/title_profile"
+        android:label="Profil"
         tools:layout="@layout/fragment_profile" />
 
 </navigation>
