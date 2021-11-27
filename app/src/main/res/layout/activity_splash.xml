@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="30dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="580dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginLeft="60dp">
+
+            <TextView
+                android:id="@+id/titleSukses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="ZonaAspirasi"
+                android:textAlignment="center"
+                android:textColor="#56ABFA"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/splash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/splash"
+            android:layout_marginTop="30dp"/>
+        <TextView
+            android:id="@+id/keterangan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sampaikan Aspirasi dan Laporan Anda secara real-time dan mudah"
+            android:textAlignment="center"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/black"
+            android:textSize="14dp"/>
+        <Button
+            android:id="@+id/addAkun"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginLeft="100dp"
+            android:text="Masuk"
+            android:textSize="14dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+        <Button
+            android:id="@+id/addDaftar"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginLeft="100dp"
+            android:backgroundTint="@color/white"
+            android:text="Daftar"
+            android:textColor="#56ABFA"
+            android:textSize="14dp" />
+    </LinearLayout>
+</ScrollView>
