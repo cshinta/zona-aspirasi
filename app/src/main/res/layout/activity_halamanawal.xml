@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp">
+        <TextView
+            android:id="@+id/Namaaplikasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="ZonaAspirasi"
+            android:textColor="#56ABFA"
+            android:textSize="50dp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/logoaplikasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            app:srcCompat="@drawable/logoaspirasi" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/kegunaanaplikasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:text="Layanan Penyampaian Aspirasi Online Untuk Masyarakat"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+    <ImageView
+        android:id="@+id/welcomeimage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/welcome" />
+
+    <Button
+        android:id="@+id/btn_mulai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="135dp"
+        android:text="Mulai  "
+        android:textAlignment="center"
+        app:icon="@drawable/panahbtn"
+        app:iconGravity="end" />
+
+</LinearLayout>
