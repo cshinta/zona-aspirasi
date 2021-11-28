@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
             android:layout_marginBottom="30dp"
-            app:srcCompat="@drawable/laporan" />
+            app:srcCompat="@drawable/laporan_illust" />
         <TextView
             android:id="@+id/keterangan"
             android:layout_width="match_parent"

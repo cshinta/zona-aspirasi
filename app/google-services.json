@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "441232836872",
+    "project_id": "zona-aspirasi",
+    "storage_bucket": "zona-aspirasi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441232836872:android:cc3be82506bfcbbe5ec4bd",
+        "android_client_info": {
+          "package_name": "com.example.zonaaspirasi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441232836872-lqh5vcvtd6cd3f988skntdp3dlqrr6j5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoM5n0ZmUM6Pzw6pjCJ_-D_wtKkWAVgAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441232836872-lqh5vcvtd6cd3f988skntdp3dlqrr6j5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

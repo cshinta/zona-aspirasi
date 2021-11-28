@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
             android:layout_marginBottom="30dp"
-            app:srcCompat="@drawable/pengumuman" />
+            app:srcCompat="@drawable/pengumuman_illust" />
 
         <TextView
             android:id="@+id/keterangan"
