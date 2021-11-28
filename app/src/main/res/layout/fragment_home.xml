@@ -8,10 +8,11 @@ tools:context=".Activity.HomeFragment"
 xmlns:tools="http://schemas.android.com/tools">
 <LinearLayout
     android:orientation="horizontal"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="30dp"
-    android:layout_marginLeft="10dp">
+    android:layout_marginLeft="10dp"
+    android:layout_gravity="center_vertical">
     <TextView
         android:id="@+id/judulaplikasi"
         android:layout_width="wrap_content"
@@ -55,16 +56,19 @@ xmlns:tools="http://schemas.android.com/tools">
 </LinearLayout>
 <LinearLayout
     android:orientation="horizontal"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="40dp"
     android:layout_marginRight="20dp"
-    android:layout_marginTop="50dp">
+    android:layout_marginTop="50dp"
+    android:layout_gravity="center_vertical">
     <androidx.cardview.widget.CardView
         android:layout_width="150dp"
         android:layout_height="match_parent"
         app:cardBackgroundColor="#56ABFA"
-        app:cardCornerRadius="10dp">
+        app:cardCornerRadius="10dp"
+        android:clickable="true"
+        android:onClick="navigate_aspirasi">
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -110,7 +114,9 @@ xmlns:tools="http://schemas.android.com/tools">
         android:layout_height="match_parent"
         app:cardBackgroundColor="#56ABFA"
         android:layout_marginLeft="30dp"
-        app:cardCornerRadius="10dp">
+        app:cardCornerRadius="10dp"
+        android:clickable="true"
+        android:onClick="navigate_pengumuman">
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"

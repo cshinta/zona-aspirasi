@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_gravity="center_vertical"
+tools:context=".Activity.AspirasiActivity">
+
+<TextView
+    android:id="@+id/judulaspirasi"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Aspirasi"
+    android:textAlignment="center"
+    android:textColor="#56ABFA"
+    android:textSize="40dp"
+    android:textStyle="bold"/>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="90dp"
+    android:layout_marginTop="60dp">
+    <androidx.cardview.widget.CardView
+        android:layout_width="230dp"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="#56ABFA"
+        app:cardCornerRadius="10dp"
+        android:clickable="true"
+        android:onClick="navigate_add_aspirasi">
+
+        <ImageView
+            android:id="@+id/iconaspirasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/iconaspirasi"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_marginLeft="5dp"
+            android:text="Aspirasi"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+        <ImageView
+            android:id="@+id/panah1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="16dp"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="230dp"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="#56ABFA"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="10dp"
+        android:clickable="true"
+        android:onClick="navigate_add_laporan">
+
+        <ImageView
+            android:id="@+id/iconlaporan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/iconlaporan"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_marginLeft="5dp"
+            android:text="Laporan"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/panah2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="16dp"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="230dp"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="#56ABFA"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="10dp"
+        android:clickable="true"
+        android:onClick="navigate_check_status">
+
+        <ImageView
+            android:id="@+id/iconstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/iconstatus"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_marginLeft="5dp"
+            android:text="Lihat Status"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+        <ImageView
+            android:id="@+id/panah3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="16dp"/>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+</LinearLayout>

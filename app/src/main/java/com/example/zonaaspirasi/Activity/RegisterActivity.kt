@@ -1,31 +1,34 @@
 package com.example.zonaaspirasi.Activity
 
+import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
-import android.annotation.SuppressLint;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import androidx.annotation.NonNull
-
 import android.text.TextUtils
-
+import android.util.Log
+import android.view.View
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.zonaaspirasi.R
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.FirebaseFirestore
 
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var SignUpMail: EditText
     private lateinit var SignUpPass: EditText
     private lateinit var SignUpConfirmPass: EditText
+    private lateinit var SignUpNIK: EditText
+    private lateinit var SignUpName: EditText
+    private lateinit var SignUpPhone: EditText
     private lateinit var SignUpButton: Button
     private var auth: FirebaseAuth? = null
+    lateinit var db: FirebaseFirestore
+    lateinit var docReference : DocumentReference
 
     @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,12 +37,19 @@ class RegisterActivity : AppCompatActivity() {
         SignUpMail = findViewById(R.id.emailInput)
         SignUpPass = findViewById(R.id.passInput)
         SignUpConfirmPass = findViewById(R.id.konfInput)
+        SignUpName = findViewById(R.id.nameInput)
+        SignUpPhone = findViewById(R.id.hpInput)
+        SignUpNIK = findViewById(R.id.nikInput)
         auth = FirebaseAuth.getInstance()
+        db = FirebaseFirestore.getInstance()
         SignUpButton = findViewById<View>(R.id.addAkun) as Button
         SignUpButton!!.setOnClickListener(View.OnClickListener {
             val email = SignUpMail.text.toString()
             val pass: String = SignUpPass.text.toString()
             val confirm: String = SignUpConfirmPass.text.toString()
+            val name = SignUpName.text.toString()
+            val phone: String = SignUpPhone.text.toString()
+            val nik: String = SignUpNIK.text.toString()
             if (TextUtils.isEmpty(email)) {
                 Toast.makeText(
                     applicationContext,
@@ -71,19 +81,41 @@ class RegisterActivity : AppCompatActivity() {
                 ).show()
             }else {
                 auth!!.createUserWithEmailAndPassword(email, pass)
-                    .addOnCompleteListener(this@RegisterActivity,
-                        OnCompleteListener<AuthResult?> { task ->
+                    .addOnCompleteListener(this,
+                        OnCompleteListener { task ->
                             if (!task.isSuccessful) {
-                                Toast.makeText(this@RegisterActivity, "ERROR", Toast.LENGTH_LONG)
+                                Toast.makeText(this@RegisterActivity, "Registrasi Gagal", Toast.LENGTH_LONG)
                                     .show()
                             } else {
-                                startActivity(
-                                    Intent(
-                                        this@RegisterActivity,
-                                        HomeActivity::class.java
-                                    )
+                                val firebaseUser: FirebaseUser? = auth!!.getCurrentUser()
+                                val userID = firebaseUser!!.getUid()
+                                FirebaseAuth.getInstance().signOut()
+                                docReference = db.collection("users").document(userID)
+                                val newUser = hashMapOf(
+                                    "name" to name,
+                                    "email" to email,
+                                    "password" to pass,
+                                    "nik" to nik,
+                                    "phone" to phone,
+
                                 )
-                                finish()
+                                docReference.set(newUser)
+                                    .addOnSuccessListener {
+                                        Toast.makeText(this, "Registrasi Berhasil", Toast.LENGTH_SHORT).show()
+                                        startActivity(
+                                            Intent(
+                                                this@RegisterActivity,
+                                                RegisterSuccess::class.java
+                                            )
+                                        )
+                                        finish()
+                                    }
+                                    .addOnFailureListener { error ->
+                                        Log.e("register", "Registrasi gagal, ${error.message}")
+                                        Toast.makeText(this, "Registrasi Berhasil", Toast.LENGTH_SHORT).show()
+                                    }
+
+
                             }
                         })
             }

@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14270833333333333" />
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/drawable/logo.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/activity_aspirasi.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/activity_change_password.xml" value="0.1265625" />
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/activity_editprofile.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/activity_empty_laporan.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/activity_halamanawal.xml" value="0.12291666666666666" />
@@ -12,17 +14,21 @@
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/activity_infoprofile.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/activity_login.xml" value="0.3671071953010279" />
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/activity_profile_detail.xml" value="0.1125" />
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/activity_register.xml" value="0.1125" />
+        <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/activity_register_success.xml" value="0.1125" />
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/activity_regristrasi.xml" value="0.1" />
+        <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/activity_regristrasi_sukses.xml" value="0.1265625" />
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/activity_splash.xml" value="0.1265625" />
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/activity_start.xml" value="0.11614583333333334" />
+        <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/activity_success_password.xml" value="0.1125" />
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/activity_suksesubahsandi.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/activity_ubahkatasandi.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/bottom_nav_menu.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/custom_input.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/fragment_beranda.xml" value="0.12291666666666666" />
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/fragment_berandaaspirasi.xml" value="0.12291666666666666" />
-        <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/fragment_halamanutama_aspirasi.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/fragment_halamanutama_aspirasi.xml" value="0.4" />
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/fragment_home.xml" value="0.12291666666666666" />
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/fragment_profilawal.xml" value="0.12291666666666666" />
         <entry key="..\:/Users/cantika aristiani/AndroidStudioProjects/ZonaAspirasi/app/src/main/res/layout/fragment_profile.xml" value="0.12291666666666666" />

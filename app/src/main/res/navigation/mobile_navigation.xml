@@ -8,11 +8,13 @@
     <fragment
         android:id="@+id/navigation_home"
         android:label="Beranda"
+        android:name="com.example.zonaaspirasi.Activity.HomeFragment"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_profile"
         android:label="Profil"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile"
+        android:name="com.example.zonaaspirasi.Activity.ProfileFragment"/>
 
 </navigation>

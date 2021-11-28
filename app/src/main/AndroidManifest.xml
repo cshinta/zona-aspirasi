@@ -13,6 +13,42 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ZonaAspirasi">
         <activity
+            android:name=".Activity.DetailStatusActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.AddSuccessActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.AddLaporanActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.AddAspirasiActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.DetailPengumumanActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.PengumumanActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.CheckStatusActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.ProfileDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.RegisterSuccess"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.SuccessPassword"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.ChangePassword"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.AspirasiActivity"
+            android:exported="true" />
+        <activity
             android:name=".Activity.SplashActivity"
             android:exported="true" />
         <activity

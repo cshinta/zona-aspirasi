@@ -86,7 +86,9 @@ tools:context=".Activity.ProfileFragment">
     <androidx.cardview.widget.CardView
         android:id="@+id/toinformasipribadi"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:onClick="navigate_detail_profile">
 
         <TextView
             android:layout_width="match_parent"
@@ -117,7 +119,9 @@ tools:context=".Activity.ProfileFragment">
     <androidx.cardview.widget.CardView
         android:id="@+id/toubahkatasandi"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:onClick="navigate_change_password">
 
         <TextView
             android:layout_width="match_parent"
@@ -148,7 +152,9 @@ tools:context=".Activity.ProfileFragment">
     <androidx.cardview.widget.CardView
         android:id="@+id/tologout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:onClick="navigateLogOut">
 
         <TextView
             android:layout_width="match_parent"
