@@ -56,4 +56,9 @@ class HomeActivity : AppCompatActivity() {
         val intent = Intent(this, ChangePassword::class.java)
         startActivity(intent)
     }
+
+    fun navigasi_edit_profile(v: View?) {
+        val intent = Intent(this, EditProfile::class.java)
+        startActivity(intent)
+    }
 }

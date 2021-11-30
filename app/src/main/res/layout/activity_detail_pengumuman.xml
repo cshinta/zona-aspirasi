@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.DetailPengumumanActivity">
+    android:orientation="vertical"
+    tools:context=".Activity.DetailPengumumanActivity"
+    android:padding="15dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:text="Jalan di Sekitar Alun-Alun Malang Ditutup Mulai Pukul 21.00 - 03.00 WIB"
+        android:paddingVertical="10dp"
+        android:id="@+id/judulPengumuman"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="20 November 2021"
+        android:textAlignment="viewEnd"
+        android:id="@+id/datePengumuman"/>
+
+    <ImageView
+        android:id="@+id/fotoPengumuman"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/pengumumanexample"
+        android:paddingVertical="15dp"/>
+
+    <TextView
+        android:id="@+id/descPengumuman"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  Malang.com, MALANG — Jalan di sekitar kawasan Alun-Alun Malang ditutup mulai pukul 21.00 WIB hingga 03.00 WIB. Hal itu dilakukan dalam rangka mendukung penerapan pemberlakukan pembatasan kegiatan masyarakat atau PPKM darurat.
+
+ Adapun jalan yang ditutup yakni Jalan Kabupaten yang selanjutnya dialihkan ke Jalan R.A.Kartini, Jalan Murtipranoto dialihkan ke Jalan Pemuda dan Jalan Ahmad Dahlan dialihkan ke Jalan Pemuda.
+
+  Di kawasan jalan yang ditutup itu terdapat sejumlah kantor seperti Sekretariat Daerah, Kantor Kementerian Agama Wonogiri, DPRD Wonogiri dan BRI Cabang Wonogiri.
+
+
+  Penutupan itu, bertujuan untuk menghalau warga yang ingin mengunjungi alun-alun. Sebab bisa berpotensi menimbulkan kerumunan. Kawasan alun-alun ditutup 24 jam. Namun jalan di sekitarnya ditutup mulai pukul 21.00 WIB hingga 03.00 WIB."
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:justificationMode="inter_word"
+        android:paddingBottom="20dp"/>
+
+    </ScrollView>
+</LinearLayout>

@@ -30,12 +30,16 @@ tools:context=".Activity.ProfileFragment">
             android:layout_marginLeft="300dp"
             android:text="Edit"
             android:textSize="20dp"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:onClick="navigasi_edit_profile"/>
         <ImageView
             android:id="@+id/edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
+            android:clickable="true"
+            android:onClick="navigasi_edit_profile"
             app:srcCompat="@drawable/ic_baseline_edit_24" />
     </LinearLayout>
     <LinearLayout

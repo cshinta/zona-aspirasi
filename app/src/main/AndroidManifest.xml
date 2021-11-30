@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ZonaAspirasi">
         <activity
+            android:name=".Activity.EditProfile"
+            android:exported="true" />
+        <activity
             android:name=".Activity.DetailStatusActivity"
             android:exported="true" />
         <activity

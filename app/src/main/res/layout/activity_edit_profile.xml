@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.EditProfile">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/back"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/ic_baseline_arrow_back_24">
+                    </Button>
+
+                </LinearLayout>
+
+            </android.widget.Toolbar>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+
+                <ImageButton
+                    android:id="@+id/imageButtonFotoProfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="110dp"
+                    android:backgroundTint="#FFFFFF"
+                    app:srcCompat="@drawable/fixeditfoto2" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="50dp">
+
+                <TextView
+                    android:id="@+id/NamaLengkapedit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Nama Lengkap"
+                    android:textSize="16dp"/>
+
+                <EditText
+                    android:id="@+id/editTextNamaLengkap"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:layout_marginTop="15dp"
+                    android:inputType="textPersonName"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Tita Alfiana"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/background_paintext"/>
+
+                <TextView
+                    android:id="@+id/NIKedit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="NIK"
+                    android:textSize="16dp"/>
+
+                <EditText
+                    android:id="@+id/editTextNIK"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:layout_marginTop="15dp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat"
+                    android:text="1234567891012"
+                    android:textSize="20dp"
+                    android:background="@drawable/background_paintext"/>
+
+                <TextView
+                    android:id="@+id/Emailedit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Email"
+                    android:textSize="16dp"/>
+
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:layout_marginTop="15dp"
+                    android:inputType="textEmailAddress"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/black"
+                    android:text="abcdefgr@gmail.com"
+                    android:textSize="20dp"
+                    android:background="@drawable/background_paintext"/>
+
+                <TextView
+                    android:id="@+id/Notlpedit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Nomor Telephone"
+                    android:textSize="16dp"/>
+
+                <EditText
+                    android:id="@+id/editTextNotlp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:layout_marginTop="15dp"
+                    android:inputType="phone"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat"
+                    android:text="089519460604"
+                    android:textSize="20dp"
+                    android:background="@drawable/background_paintext"/>
+
+                <Button
+                    android:id="@+id/buttonsimpan"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="#56ABFA"
+                    android:text="Simpan"
+                    android:textAllCaps="false"
+                    android:textSize="16dp"
+                    app:cornerRadius="10dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

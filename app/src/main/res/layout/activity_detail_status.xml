@@ -1,9 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.DetailStatusActivity">
+    android:orientation="vertical"
+    tools:context=".Activity.DetailStatusActivity"
+    android:padding="10dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/dateField"
+                android:layout_width="117dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:text="11 Maret 2000"
+                android:textColor="@color/black" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="5dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:text="Jalan Berlubang"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:id="@+id/judulPengumuman"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:gravity="right"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="@color/red"
+                android:id="@+id/statusColor">
+                <TextView
+                    android:id="@+id/statusField"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Menunggu"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:paddingHorizontal="5dp"
+                    android:textStyle="bold"
+                    android:paddingVertical="5dp"/>
+            </androidx.cardview.widget.CardView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <TextView
+                android:id="@+id/titleField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jalan Berlubang"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"/>
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <ImageView
+                android:id="@+id/fotoPengumuman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pengumumanexample"
+                android:paddingVertical="15dp"
+                android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/locationField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kota Malang"
+                android:textColor="@color/black"
+                android:textAlignment="viewStart"
+                android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="5dp">
+
+            <TextView
+                android:id="@+id/descField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ini penjelasan"
+                android:textColor="@color/black"
+                android:textAlignment="viewStart"
+                android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingVertical="10dp">
+                <TextView
+                    android:id="@+id/tertuju"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tertuju ke"
+                    android:textColor="@color/blue"
+                    android:textAlignment="viewStart"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/instansiField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dinas Pendidikan"
+                    android:textColor="@color/black"
+                    android:gravity="left"
+                    android:layout_weight="1"/>
+        </TableRow>
+    </TableLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hapus"
+        android:gravity="center|bottom"/>
+</LinearLayout>

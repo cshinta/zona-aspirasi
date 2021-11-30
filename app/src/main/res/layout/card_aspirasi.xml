@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/dateField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20 November 2021"
+                android:paddingVertical="5dp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:id="@+id/titleField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jalan Berlubang"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:backgroundTint="@color/red"
+                android:id="@+id/statusColor">
+                <TextView
+                    android:id="@+id/statusField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Menunggu"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="10dp"
+                    android:textStyle="bold"
+                    android:paddingVertical="5dp"/>
+            </androidx.cardview.widget.CardView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/descField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis vitae lectus pellentesque vitae. Fermentum"
+                android:textColor="@color/black"
+                android:paddingTop="10dp"
+                android:paddingBottom="20dp"/>
+        </TableRow>
+    </TableLayout>
+
+</androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Activity.AddLaporanPart2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/KategoriAspirasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Masukkan kategori Laporan *"
+            android:textSize="16dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/inputKategori"
+                android:background="@drawable/background_paintext2"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/judulLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Masukkan judul aspirasi *"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:id="@+id/inputJudul"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:layout_marginTop="15dp"
+            android:inputType="textPersonName"
+            android:fontFamily="@font/montserrat"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:background="@drawable/background_paintext2"/>
+
+        <TextView
+            android:id="@+id/isiLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Masukkan Isi Aspirasi *"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:id="@+id/inputIsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:minLines="5"
+            android:inputType="textMultiLine" />
+
+        <TextView
+            android:id="@+id/lampiranLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Masukkan Lampiran Pendukung *"
+            android:textSize="16dp"/>
+        <Button
+            android:id="@+id/btn_upload_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/ic_add_folder"
+            android:backgroundTint="@color/white"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:text="Upload gambar pendukung"
+            android:padding="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/img_showUpload"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</FrameLayout>
