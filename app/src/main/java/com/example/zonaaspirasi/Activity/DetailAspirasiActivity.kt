@@ -2,6 +2,7 @@ package com.example.zonaaspirasi.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.zonaaspirasi.R
@@ -39,5 +40,7 @@ class DetailAspirasiActivity : AppCompatActivity() {
         if(imageURI != ""){
             Picasso.get().load(imageURI).into(imgDetail)
         }
+        supportActionBar?.hide()
     }
+
 }

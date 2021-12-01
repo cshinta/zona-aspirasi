@@ -120,10 +120,13 @@ class RegisterActivity : AppCompatActivity() {
                         })
             }
         })
+
+        supportActionBar?.hide()
     }
 
     fun navigate_login(v: View?) {
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
     }
+
 }

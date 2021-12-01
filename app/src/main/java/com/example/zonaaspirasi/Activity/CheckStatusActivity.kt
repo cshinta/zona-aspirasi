@@ -2,6 +2,7 @@ package com.example.zonaaspirasi.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.viewpager.widget.ViewPager
 import com.example.zonaaspirasi.Adapter.CheckStatusFragmentAdapter
 import com.example.zonaaspirasi.R
@@ -19,5 +20,8 @@ class CheckStatusActivity : AppCompatActivity() {
         val tabs = findViewById<TabLayout>(R.id.tabs_status)
 
         tabs.setupWithViewPager(viewPager)
+
+        supportActionBar?.hide()
     }
+
 }

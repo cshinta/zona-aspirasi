@@ -44,7 +44,8 @@ class AddAspirasiActivity : AppCompatActivity() {
         val kategoriText = sharedPreference.getString(KATEGORI_KEY, "")
         instansi.setText(instansiText)
         autoTextView.setText(kategoriText)
-    }
+
+        supportActionBar?.hide()}
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
@@ -62,5 +63,7 @@ class AddAspirasiActivity : AppCompatActivity() {
         autoTextView.setText(kategoriText)
     }
 
-
+    fun navigateBack(v: View?) {
+        super.onBackPressed();
+    }
 }

@@ -9,7 +9,8 @@
 
     <android.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/blue">
         <LinearLayout
             android:layout_marginRight="20dp"
             android:orientation="horizontal"
@@ -21,8 +22,11 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="#00FF0000"
-                app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+                android:clickable="true"
+                android:onClick="navigateBack"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_25" />
 
+            //textview buat title disini
         </LinearLayout>
     </android.widget.Toolbar>
 

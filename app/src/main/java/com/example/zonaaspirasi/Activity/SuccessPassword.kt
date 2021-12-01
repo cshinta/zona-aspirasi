@@ -3,6 +3,7 @@ package com.example.zonaaspirasi.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import com.example.zonaaspirasi.R
 
@@ -15,5 +16,7 @@ class SuccessPassword : AppCompatActivity() {
             intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
+        supportActionBar?.hide()
     }
+
 }

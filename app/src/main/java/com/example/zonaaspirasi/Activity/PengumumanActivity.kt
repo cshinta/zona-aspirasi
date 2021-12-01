@@ -36,6 +36,8 @@ class PengumumanActivity : AppCompatActivity() {
         rvPosting = findViewById(R.id.pengumuman_rv)
         rvPosting.layoutManager = LinearLayoutManager(this)
         rvPosting.adapter = pengumumanAdapter
+
+        supportActionBar?.hide()
     }
 
     private fun loadPostData(){
@@ -54,5 +56,8 @@ class PengumumanActivity : AppCompatActivity() {
             .addOnFailureListener{
                 Log.e("Dashboard", "Error, $it")
             }
+    }
+    fun navigateBack(v: View?) {
+        super.onBackPressed();
     }
 }

@@ -99,6 +99,9 @@ class AddLaporanFinishActivity : AppCompatActivity() {
         judul.setText(judulText)
         isi.setText(isiText)
         autotextView.setText(kategoriText)
+
+
+        supportActionBar?.hide()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -209,6 +212,10 @@ class AddLaporanFinishActivity : AppCompatActivity() {
                 Log.e("Error","Postingan gagal disimpan ${error.message}")
             }
 
+    }
+
+    fun navigateBack(v: View?) {
+        super.onBackPressed();
     }
 
 }

@@ -1,11 +1,19 @@
 package com.example.zonaaspirasi.Activity
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import com.example.zonaaspirasi.R
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.firestore.FirebaseFirestore
+import com.squareup.picasso.Picasso
+import jp.wasabeef.picasso.transformations.CropCircleTransformation
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,6 +44,27 @@ class ProfileFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val auth = FirebaseAuth.getInstance()
+        val db = FirebaseFirestore.getInstance()
+        val firebaseUser: FirebaseUser? = auth!!.getCurrentUser()
+        val userID = firebaseUser!!.getUid()
+        db.collection("users").document(userID).get()
+            .addOnSuccessListener { document ->
+                Log.i("userData", "${document}")
+                val displayName = document["name"].toString()
+                val nik = document["nik"].toString()
+                val gambar = document["image"].toString()
+                view.findViewById<TextView>(R.id.namaprofil).text = displayName
+                view.findViewById<TextView>(R.id.nikprofil).text = nik
+                Picasso.get().load(gambar).resize(300, 300).transform(CropCircleTransformation()).into(view.findViewById<ImageView>(R.id.fotoprofil))
+            }
+            .addOnFailureListener {exception ->
+                Log.e("profil", "Profil Error, ${exception}")
+            }
     }
 
     companion object {

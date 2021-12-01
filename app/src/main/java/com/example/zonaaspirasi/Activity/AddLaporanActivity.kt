@@ -74,6 +74,8 @@ class AddLaporanActivity : AppCompatActivity() {
         instansi.setText(instansiText)
         dateButton.setText(tanggalText)
         lokasi.setText(lokasiText)
+
+        supportActionBar?.hide()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -93,5 +95,9 @@ class AddLaporanActivity : AppCompatActivity() {
         instansi.setText(instansiText)
         dateButton.setText(tanggalText)
         lokasi.setText(lokasiText)
+    }
+
+    fun navigateBack(v: View?) {
+        super.onBackPressed();
     }
 }
