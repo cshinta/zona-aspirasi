@@ -13,6 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ZonaAspirasi">
         <activity
+            android:name=".Activity.DetailAspirasiActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.AddLaporanFinishActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.AddAspirasiFinishActivity"
+            android:exported="true" />
+        <activity
             android:name=".Activity.EditProfile"
             android:exported="true" />
         <activity

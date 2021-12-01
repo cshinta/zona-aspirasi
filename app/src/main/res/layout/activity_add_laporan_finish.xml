@@ -1,16 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".Activity.AddLaporanPart2">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.AddLaporanFinishActivity">
+
+    <android.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue">
+        <LinearLayout
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#00FF0000"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_25" />
+
+        </LinearLayout>
+    </android.widget.Toolbar>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingVertical="20dp"
+        android:paddingHorizontal="30dp"
         android:orientation="vertical">
-
-
         <TextView
             android:id="@+id/KategoriAspirasi"
             android:layout_width="match_parent"
@@ -39,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/montserrat"
-            android:text="Masukkan judul aspirasi *"
+            android:text="Masukkan judul laporan *"
             android:textSize="16dp"/>
 
         <EditText
@@ -60,7 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/montserrat"
-            android:text="Masukkan Isi Aspirasi *"
+            android:text="Masukkan Isi Laporan *"
             android:textSize="16dp"/>
 
         <EditText
@@ -98,5 +120,19 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"/>
+
+        <Space
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <Button
+            android:id="@+id/button_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kirim"
+            android:layout_marginTop="10dp"/>
+
     </LinearLayout>
-</FrameLayout>
+
+</LinearLayout>

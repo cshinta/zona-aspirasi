@@ -89,7 +89,6 @@ class RegisterActivity : AppCompatActivity() {
                             } else {
                                 val firebaseUser: FirebaseUser? = auth!!.getCurrentUser()
                                 val userID = firebaseUser!!.getUid()
-                                FirebaseAuth.getInstance().signOut()
                                 docReference = db.collection("users").document(userID)
                                 val newUser = hashMapOf(
                                     "name" to name,
@@ -97,6 +96,7 @@ class RegisterActivity : AppCompatActivity() {
                                     "password" to pass,
                                     "nik" to nik,
                                     "phone" to phone,
+                                    "image" to "https://firebasestorage.googleapis.com/v0/b/zona-aspirasi.appspot.com/o/uploads%2Fblank-profile-picture-973460_640.webp?alt=media&token=ec6cd48d-542c-4416-8632-055809f0ad35"
 
                                 )
                                 docReference.set(newUser)

@@ -17,23 +17,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         //Check current user
         val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
-        firebaseAuth.addAuthStateListener(authStateListener)
-    }
-
-    var authStateListener: FirebaseAuth.AuthStateListener = object :
-        FirebaseAuth.AuthStateListener {
-        override fun onAuthStateChanged(firebaseAuth: FirebaseAuth) {
-            val firebaseUser: FirebaseUser? = firebaseAuth.getCurrentUser()
-            if (firebaseUser == null) {
-                val intent = Intent(this@MainActivity, SplashActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
-            if (firebaseUser != null) {
-                val intent = Intent(this@MainActivity, HomeActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
+        val firebaseUser: FirebaseUser? = firebaseAuth.getCurrentUser()
+        if (firebaseUser == null) {
+            val intent = Intent(this@MainActivity, SplashActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+        if (firebaseUser != null) {
+            val intent = Intent(this@MainActivity, HomeActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }

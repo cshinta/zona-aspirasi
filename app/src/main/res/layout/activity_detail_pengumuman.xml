@@ -8,11 +8,6 @@
     tools:context=".Activity.DetailPengumumanActivity"
     android:padding="15dp">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fillViewport="true">
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,7 +28,6 @@
         android:id="@+id/fotoPengumuman"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/pengumumanexample"
         android:paddingVertical="15dp"/>
 
     <TextView
@@ -52,6 +46,4 @@
         android:textSize="20dp"
         android:justificationMode="inter_word"
         android:paddingBottom="20dp"/>
-
-    </ScrollView>
 </LinearLayout>
