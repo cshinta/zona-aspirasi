@@ -63,6 +63,8 @@ class LoginActivity : AppCompatActivity() {
                         }
                     })
         })
+
+        supportActionBar?.hide()
     }
 
     fun navigate_register(v: View?) {

@@ -10,6 +10,8 @@ class AspirasiActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_aspirasi)
+
+        supportActionBar?.hide()
     }
     fun navigate_add_aspirasi(v: View?) {
         val intent = Intent(this, AddAspirasiActivity::class.java)
@@ -25,4 +27,5 @@ class AspirasiActivity : AppCompatActivity() {
         val intent = Intent(this, CheckStatusActivity::class.java)
         startActivity(intent)
     }
+    supportActionBar?.hide()
 }

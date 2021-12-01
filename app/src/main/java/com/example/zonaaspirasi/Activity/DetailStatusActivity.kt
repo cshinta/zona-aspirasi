@@ -71,5 +71,7 @@ class DetailStatusActivity : AppCompatActivity() {
         if(imageURI != ""){
             Picasso.get().load(imageURI).into(imgDetail)
         }
+        supportActionBar?.hide()
     }
+
 }

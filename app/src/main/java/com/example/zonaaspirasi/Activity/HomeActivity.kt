@@ -29,6 +29,8 @@ class HomeActivity : AppCompatActivity() {
             R.id.navigation_home, R.id.navigation_home, R.id.navigation_profile))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        supportActionBar?.hide()
     }
 
     fun navigateLogOut(v: View?) {
@@ -61,4 +63,5 @@ class HomeActivity : AppCompatActivity() {
         val intent = Intent(this, EditProfile::class.java)
         startActivity(intent)
     }
+
 }

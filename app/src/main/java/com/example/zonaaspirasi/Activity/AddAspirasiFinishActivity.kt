@@ -80,6 +80,8 @@ class AddAspirasiFinishActivity : AppCompatActivity() {
         val isiText = sharedPreference.getString(ISI_KEY, "")
         judul.setText(judulText)
         isi.setText(isiText)
+
+        supportActionBar?.hide()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

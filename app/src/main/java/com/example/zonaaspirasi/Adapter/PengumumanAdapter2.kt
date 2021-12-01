@@ -14,35 +14,37 @@ import com.example.zonaaspirasi.R
 import com.squareup.picasso.Picasso
 
 class PengumumanAdapter2(var postListItems: List<PengumumanCoba>) :RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-        class postViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            fun bind(postModel: PengumumanCoba) {
-                val context = itemView.context
-                itemView.findViewById<CardView>(R.id.item_pengumuman).setOnClickListener {
-                    val intent = Intent(context, DetailPengumumanActivity::class.java)
-                    intent.putExtra("JUDUL", postModel.judul)
-                    intent.putExtra("DESKRIPSI", postModel.deskripsi)
-                    intent.putExtra("TANGGAL", postModel.tanggal)
-                    intent.putExtra("GAMBAR", postModel.gambar)
-                    context.startActivity(intent)
-                }
-                Picasso.get().load(postModel.gambar).into(itemView.findViewById<ImageView>(R.id.imagePengumuman));
-                itemView.findViewById<TextView>(R.id.tanggalPengumuman).text = postModel.tanggal
-                itemView.findViewById<TextView>(R.id.judulPengumuman).text = postModel.judul
-                itemView.findViewById<TextView>(R.id.descPengumuman).text = postModel.deskripsi
+    class postViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bind(postModel: PengumumanCoba) {
+            val context = itemView.context
+            itemView.findViewById<CardView>(R.id.item_pengumuman).setOnClickListener {
+                val intent = Intent(context, DetailPengumumanActivity::class.java)
+                intent.putExtra("JUDUL", postModel.judul)
+                intent.putExtra("DESKRIPSI", postModel.deskripsi)
+                intent.putExtra("TANGGAL", postModel.tanggal)
+                intent.putExtra("GAMBAR", postModel.gambar)
+                context.startActivity(intent)
             }
+            if(postModel.gambar != ""){
+                Picasso.get().load(postModel.gambar).into(itemView.findViewById<ImageView>(R.id.imagePengumuman));
+            }
+            itemView.findViewById<TextView>(R.id.tanggalPengumuman).text = postModel.tanggal
+            itemView.findViewById<TextView>(R.id.judulPengumuman).text = postModel.judul
+            itemView.findViewById<TextView>(R.id.descPengumuman).text = postModel.deskripsi
         }
-
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.card_pengumuman, parent, false)
-            return postViewHolder(view)
-        }
-
-        override fun getItemCount(): Int {
-            return postListItems.size
-        }
-
-        override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-            (holder as postViewHolder).bind(postListItems[position])
-        }
-
     }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.card_pengumuman, parent, false)
+        return postViewHolder(view)
+    }
+
+    override fun getItemCount(): Int {
+        return postListItems.size
+    }
+
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        (holder as postViewHolder).bind(postListItems[position])
+    }
+
+}
