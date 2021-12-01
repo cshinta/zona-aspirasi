@@ -14,6 +14,8 @@ import com.google.firebase.auth.FirebaseAuth
 
 import com.google.android.gms.tasks.OnCompleteListener
 import com.example.zonaaspirasi.R
+import io.reactivex.disposables.CompositeDisposable
+import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var SignInMail: EditText
@@ -38,7 +40,6 @@ class LoginActivity : AppCompatActivity() {
 
         MailAlert.setVisibility(View.GONE);
         PassAlert.setVisibility(View.GONE);
-        SignInButton.setEnabled(false);
 
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance()

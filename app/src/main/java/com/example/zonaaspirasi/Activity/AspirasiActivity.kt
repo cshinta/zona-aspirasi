@@ -27,5 +27,5 @@ class AspirasiActivity : AppCompatActivity() {
         val intent = Intent(this, CheckStatusActivity::class.java)
         startActivity(intent)
     }
-    supportActionBar?.hide()
+
 }

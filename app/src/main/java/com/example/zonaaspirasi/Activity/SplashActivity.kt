@@ -11,13 +11,13 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+        supportActionBar?.hide()
 
         findViewById<Button>(R.id.btn_mulai).setOnClickListener{
             intent = Intent(this, StartActivity::class.java)
             startActivity(intent)
         }
 
-        supportActionBar?.hide()
     }
 
 }

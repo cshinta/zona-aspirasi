@@ -30,7 +30,12 @@ class PengumumanAdapter2(var postListItems: List<PengumumanCoba>) :RecyclerView.
             }
             itemView.findViewById<TextView>(R.id.tanggalPengumuman).text = postModel.tanggal
             itemView.findViewById<TextView>(R.id.judulPengumuman).text = postModel.judul
-            itemView.findViewById<TextView>(R.id.descPengumuman).text = postModel.deskripsi
+            if(postModel.deskripsi!!.length < 80){
+                itemView.findViewById<TextView>(R.id.descPengumuman).text = postModel.deskripsi
+            }
+            else{
+                itemView.findViewById<TextView>(R.id.descPengumuman).text = postModel.deskripsi.substring(0,80)
+            }
         }
     }
 

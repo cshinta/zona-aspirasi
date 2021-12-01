@@ -82,7 +82,6 @@
                 android:text="Tertuju ke"
                 android:textColor="@color/blue"
                 android:textAlignment="viewStart"
-                android:layout_weight="1"
                 />
             <TextView
                 android:id="@+id/instansiField"

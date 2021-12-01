@@ -15,5 +15,5 @@ class AddSuccessActivity : AppCompatActivity() {
     fun navigateBack(v: View?) {
         super.onBackPressed();
     }
-    supportActionBar?.hide()
+
 }

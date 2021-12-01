@@ -31,8 +31,6 @@ tools:context=".Activity.ProfileDetailActivity">
                 android:clickable="true"
                 android:onClick="navigateBack"
                 app:srcCompat="@drawable/ic_baseline_arrow_back_25" />
-
-            //textview buat title disini
         </LinearLayout>
     </android.widget.Toolbar>
 
@@ -49,7 +47,6 @@ tools:context=".Activity.ProfileDetailActivity">
             android:layout_height="130dp"
             android:layout_marginTop="4dp"
             android:layout_marginLeft="85dp"
-            android:background="@drawable/ellipse"
             />
     </LinearLayout>
 
@@ -92,7 +89,6 @@ tools:context=".Activity.ProfileDetailActivity">
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="Tita Alfiana"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
             </LinearLayout>
@@ -133,7 +129,6 @@ tools:context=".Activity.ProfileDetailActivity">
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="123456789101112"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
             </LinearLayout>
@@ -174,7 +169,6 @@ tools:context=".Activity.ProfileDetailActivity">
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="titaalfiana@gmail.com"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
             </LinearLayout>
@@ -215,7 +209,6 @@ tools:context=".Activity.ProfileDetailActivity">
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="089519460604"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
             </LinearLayout>

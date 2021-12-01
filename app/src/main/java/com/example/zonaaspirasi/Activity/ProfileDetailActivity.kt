@@ -2,8 +2,16 @@ package com.example.zonaaspirasi.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
 import com.example.zonaaspirasi.R
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.firestore.FirebaseFirestore
+import com.squareup.picasso.Picasso
+import jp.wasabeef.picasso.transformations.CropCircleTransformation
 
 class ProfileDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

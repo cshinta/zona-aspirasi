@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Activity.DetailStatusActivity"
-    android:padding="10dp">
+    android:paddingVertical="40dp"
+    android:paddingHorizontal="30dp">
 
 
     <TableLayout
@@ -47,7 +48,6 @@
                 app:cardCornerRadius="10dp"
                 android:gravity="right"
                 android:layout_marginLeft="20dp"
-                android:backgroundTint="@color/red"
                 android:id="@+id/statusColor">
                 <TextView
                     android:id="@+id/statusField"
@@ -128,7 +128,6 @@
                     android:text="Tertuju ke"
                     android:textColor="@color/blue"
                     android:textAlignment="viewStart"
-                    android:layout_weight="1"
                     />
                 <TextView
                     android:id="@+id/instansiField"

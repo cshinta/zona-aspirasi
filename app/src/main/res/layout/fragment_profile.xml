@@ -51,8 +51,7 @@ tools:context=".Activity.ProfileFragment">
         <ImageView
             android:id="@+id/fotoprofil"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/fotoorang" />
+            android:layout_height="wrap_content"/>
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
@@ -63,7 +62,6 @@ tools:context=".Activity.ProfileFragment">
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:text="Putri Amanda"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:textColor="@color/white"/>
@@ -71,7 +69,6 @@ tools:context=".Activity.ProfileFragment">
                 android:id="@+id/nikprofil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3576016102010001"
                 android:textSize="20dp"
                 android:textColor="@color/white"/>
         </LinearLayout>
