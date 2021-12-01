@@ -192,6 +192,7 @@ class AddLaporanFinishActivity : AppCompatActivity() {
             "lokasi" to lokasiText,
             "tanggal" to tanggalText,
             "instansi" to instansiText,
+            "status" to "Menunggu",
             "UID" to userID,
         )
 

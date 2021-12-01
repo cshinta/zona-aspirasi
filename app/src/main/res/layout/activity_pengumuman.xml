@@ -39,6 +39,39 @@
             android:layout_height="wrap_content"
             tools:listitem="@layout/card_pengumuman" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/emptyLayout">
+            <ImageView
+                android:id="@+id/splash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="30dp"
+                app:srcCompat="@drawable/pengumuman_illust" />
+
+            <TextView
+                android:id="@+id/keterangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Pengumuman Tidak Ditemukan"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14dp"/>
+            <TextView
+                android:id="@+id/laporan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Anda tidak memiliki pengumuman saat ini."
+                android:textAlignment="center"
+                android:textColor="#838181"
+                android:textSize="14dp"/>
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

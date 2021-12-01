@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -61,8 +62,13 @@ class AspirasiStatusFragment : Fragment() {
         aspirasiRepo.getAspirasilist()
             .addOnCompleteListener{
                 postList = it.result!!.toObjects(Aspirasi::class.java)
+                if(postList.size > 0){
+                    view?.findViewById<LinearLayout>(R.id.emptyLayoutAspirasi)?.setVisibility(View.GONE)
+                }
+                else{
+                    view?.findViewById<LinearLayout>(R.id.emptyLayoutAspirasi)?.setVisibility(View.VISIBLE)
+                }
                 aspirasiAdapter.aspirasiData= postList
-                Log.i("Feed", postList.get(0).toString())
                 aspirasiAdapter.notifyDataSetChanged()
             }
             .addOnFailureListener{

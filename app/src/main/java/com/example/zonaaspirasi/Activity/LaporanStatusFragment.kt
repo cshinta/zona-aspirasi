@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -68,8 +69,13 @@ class LaporanStatusFragment : Fragment() {
         laporanRepo.getLaporanlist()
             .addOnCompleteListener{
                 laporanList = it.result!!.toObjects(Laporan::class.java)
+                if(laporanList.size > 0){
+                    view?.findViewById<LinearLayout>(R.id.emptyLayoutLaporan)?.setVisibility(View.GONE)
+                }
+                else{
+                    view?.findViewById<LinearLayout>(R.id.emptyLayoutLaporan)?.setVisibility(View.VISIBLE)
+                }
                 laporanAdapter.laporanData= laporanList
-                Log.i("Feed", laporanList.get(0).toString())
                 laporanAdapter.notifyDataSetChanged()
             }
             .addOnFailureListener{

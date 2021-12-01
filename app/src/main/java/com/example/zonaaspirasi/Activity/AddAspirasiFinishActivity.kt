@@ -50,6 +50,7 @@ class AddAspirasiFinishActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_aspirasi_finish)
+        supportActionBar?.hide()
         sharedPreference = getSharedPreferences(PREF_NAME, MODE_PRIVATE)
 
         judul = findViewById(R.id.inputJudul)
@@ -166,7 +167,6 @@ class AddAspirasiFinishActivity : AppCompatActivity() {
             "gambar" to imageURI,
             "kategori" to kategoriText,
             "instansi" to instansiText,
-            "status" to "Menunggu",
             "UID" to userID,
         )
 
@@ -183,5 +183,9 @@ class AddAspirasiFinishActivity : AppCompatActivity() {
                 Log.e("Error","Postingan gagal disimpan ${error.message}")
             }
 
+    }
+
+    fun navigateBack(v: View?) {
+        super.onBackPressed();
     }
 }

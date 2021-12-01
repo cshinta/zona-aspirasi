@@ -60,6 +60,13 @@ tools:context=".Activity.LoginActivity">
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
+        android:id="@+id/text_email_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff0000"
+        android:text="@string/email_exist_alert"/>
+
+    <TextView
         android:id="@+id/inputPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -83,6 +90,12 @@ tools:context=".Activity.LoginActivity">
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
         tools:ignore="TouchTargetSizeCheck" />
+    <TextView
+        android:id="@+id/text_password_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff0000"
+        android:text="@string/password_minimal_alert"/>
 
     <Button
         android:id="@+id/addAkun"

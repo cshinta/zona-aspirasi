@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.StrictMode
 import android.util.Log
+import android.view.View
+import android.widget.LinearLayout
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -40,8 +42,13 @@ class PengumumanActivity : AppCompatActivity() {
         pengumumanRepo.getPengumumanlist()
             .addOnCompleteListener{
                 postList = it.result!!.toObjects(PengumumanCoba::class.java)
+                if(postList.size > 0){
+                    findViewById<LinearLayout>(R.id.emptyLayout).setVisibility(View.GONE)
+                }
+                else{
+                    findViewById<LinearLayout>(R.id.emptyLayout).setVisibility(View.VISIBLE)
+                }
                 pengumumanAdapter.postListItems= postList
-                Log.i("Feed", postList.get(0).toString())
                 pengumumanAdapter.notifyDataSetChanged()
             }
             .addOnFailureListener{
